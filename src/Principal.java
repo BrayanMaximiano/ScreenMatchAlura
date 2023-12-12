@@ -54,6 +54,7 @@ public class Principal {
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtrar(primeiro);
+        //asd
 
 
     }
