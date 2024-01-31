@@ -5,12 +5,12 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
 import java.rmi.ServerError;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
         // Cria filme
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
@@ -35,8 +35,7 @@ public class Principal {
         System.out.println("Duração para maratonar : " + lost.getDuracaoEmMinutos());
 
         // Cria filme
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -55,6 +54,21 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtrar(primeiro);
         //asd
+
+       var filmeDoBrayan = new Filme("+ Veloses + Furiosos");
+       filmeDoBrayan.setAnoDeLancamento(2003);
+       filmeDoBrayan.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(filmeDoBrayan);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("A lista possui "+ listaDeFilmes.size() + " itens");
+        System.out.println("Primeiro filme" + listaDeFilmes.get(0).getNome());
+
+        System.out.println(listaDeFilmes);
 
 
     }
