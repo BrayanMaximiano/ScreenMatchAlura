@@ -14,6 +14,7 @@ public class Principal {
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
+
         System.out.println("Duraçao do filme é de " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();

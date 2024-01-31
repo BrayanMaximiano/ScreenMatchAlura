@@ -32,6 +32,7 @@ public class Titulo {
         return anoDeLancamento;
     }
 
+
     public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
     }
