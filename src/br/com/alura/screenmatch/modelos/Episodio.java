@@ -4,9 +4,17 @@ import br.com.alura.screenmatch.calculos.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
-    Serie serie;
-    private int totalVisualisacoes;
-    private int totalAvaliacoes;
+    private String nome;
+    private Serie serie;
+    private int totalVisualizacoes;
+
+    public int getTotalVisualizacoes() {
+        return totalVisualizacoes;
+    }
+
+    public void setTotalVisualizacoes(int totalVisualizacoes) {
+        this.totalVisualizacoes = totalVisualizacoes;
+    }
 
     public int getNumero() {
         return numero;
@@ -14,6 +22,14 @@ public class Episodio implements Classificavel {
 
     public void setNumero(int numero) {
         this.numero = numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Serie getSerie() {
@@ -24,19 +40,11 @@ public class Episodio implements Classificavel {
         this.serie = serie;
     }
 
-    public int getTotalVisualisacoes() {
-        return totalVisualisacoes;
-    }
-
-    public void setTotalVisualisacoes(int totalVisualisacoes) {
-        this.totalVisualisacoes = totalVisualisacoes;
-    }
-
     @Override
     public int getClassificacao() {
-        if (totalAvaliacoes > 100){
+        if (totalVisualizacoes > 100) {
             return 4;
-        }else{
+        } else {
             return 2;
         }
     }
